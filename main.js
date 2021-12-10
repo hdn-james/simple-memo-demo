@@ -186,3 +186,13 @@ function handleDontKnowChoice(user, word) {
 
 	updateMockData();
 }
+
+// User choose "I Know This"
+handleKnowChoice("user1", "word1");
+console.log("Username: user1 - Word: word1");
+console.log(mockDataJson);
+
+// User choose "I Don't Know This"
+handleDontKnowChoice("user1", "word2");
+console.log("Username: user1 - Word: word2");
+console.log(mockDataJson);
