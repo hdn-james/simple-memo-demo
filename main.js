@@ -138,15 +138,18 @@ function handleKnowChoice(user, word) {
 	let currentInterval = currentWord["interval"];
 	let currentDay = currentWord["day"];
 
+	// get new Ease-Factor and new interval
 	const [newEF, newInterval] = handleKnowChoiceEFactorAndInterval(
 		currentEF,
 		currentInterval
 	);
 
+	// update mock data
 	currentWord["day"] = updateDayWithInterval(currentDay, newInterval);
 	currentWord["interval"] = newInterval;
 	currentWord["ef"] = newEF;
 
+	// update json file
 	updateMockData();
 }
 
@@ -175,15 +178,18 @@ function handleDontKnowChoice(user, word) {
 	let currentInterval = currentWord["interval"];
 	let currentDay = currentWord["day"];
 
+	// get new Ease-Factor and new interval
 	const [newEF, newInterval] = handleDontKnowChoiceEFactorAndInterval(
 		currentEF,
 		currentInterval
 	);
 
+	// update mock data
 	currentWord["day"] = updateDayWithInterval(currentDay, newInterval);
 	currentWord["interval"] = newInterval;
 	currentWord["ef"] = newEF;
 
+	// update to json file
 	updateMockData();
 }
 
